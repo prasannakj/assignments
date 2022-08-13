@@ -1,0 +1,62 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Machine Name</th>
+        <th>Machine ID</th>
+        <th>Active Power(MW)</th>
+        <th>Apparent Power(MVA)</th>
+        <th>Reactive Power(MVAr)</th>
+        <th>Current(Amps)</th>
+        <th>Voltage(Volts)</th>
+        <th>Power Factor</th>
+
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    {'name':'Auto Winding Machine', 'machineid':'machine001','activepower':'0','apparentpower':'0','reactivepower':'0','current':'0',
+	    'voltage':'0','powerfactor':'0'},
+
+	    {'name':'Boiler Machine','machineid':'machine002','activepower':'0','apparentpower':'0','reactivepower':'0','current':'0','voltage':'0','powerfactor':'0'}
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].machineid}<td>
+							<td>${data[i].activepower}<td>
+							<td>${data[i].apparentpower}<td>
+							<td>${data[i].reactivepower}<td>
+							<td>${data[i].current}<td>
+							<td>${data[i].voltage}<td>
+							<td>${data[i].powerfactor}<td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>

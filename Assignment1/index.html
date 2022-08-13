@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <title>Form Validator</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form" class="form">
+            <h2>Form</h2>
+            <div class="form-control">
+                <label for="username">Select your source</label>
+                <input type="text" id="username" placeholder="Google cloud storage">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="name">Provide a name for pipeline</label>
+                <input type="text" id="name" placeholder="e.g., cust_shop_energy_gkateway001">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="project-name">GCS project name</label>
+                <input type="name" id="namee" placeholder="project-id">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">GCS bucket name</label>
+                <input type="password" id="password2" placeholder="gs://your-bucket">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Input Cloud Storage File(s)</label>
+                <input type="password" id="password2" placeholder="GCS location of your files">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">GCS credentials</label>
+                <input type="password" id="password2" placeholder="Enter a valid credentials">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Run every</label>
+                <input type="password" id="password2" placeholder="(in minutes)">
+                <small>Error Message</small>
+            </div>
+            <button>Create</button>
+            <button>Cancel</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
